@@ -3,7 +3,7 @@
 require "pp"
 require "json"
 
-class RepeaterHub < Controller
+class SimpleSlice < Controller
 
   periodic_timer_event :update_info, 3
   attr_accessor :bcast_mac
