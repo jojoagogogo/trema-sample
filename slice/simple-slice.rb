@@ -33,7 +33,8 @@ class SimpleSlice < Controller
       @conf["groups"].keys.sort.each do |key|
         group = @conf["groups"][key]
         # group search 
-        if (group.include? src) && (group.include? dest)
+        if ((group.include? src.downcase)||(group.include? src.upcase)) &&
+            ((group.include? dest.downcase)||(group.include? src.upcase))
           is_group = true
           break;
         end
