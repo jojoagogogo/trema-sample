@@ -34,7 +34,7 @@ class SimpleSlice < Controller
         group = @conf["groups"][key]
         # group search 
         if ((group.include? src.downcase)||(group.include? src.upcase)) &&
-            ((group.include? dest.downcase)||(group.include? src.upcase))
+            ((group.include? dest.downcase)||(group.include? dest.upcase))
           is_group = true
           break;
         end
